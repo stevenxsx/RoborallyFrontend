@@ -1,5 +1,5 @@
-$height: 75px; //We define a variable, https://sass-lang.com/documentation/variables
-$width: 75px;
+$height: 50px; //We define a variable, https://sass-lang.com/documentation/variables
+$width: 50px;
 //Define a style that can be included/re-used in others styles, note that the style takes a single parameter
 // https://sass-lang.com/documentation/at-rules/mixin
 @mixin container($color) {
@@ -41,3 +41,10 @@ $width: 75px;
   @include player(blue)
 }
 
+.orangePlayer {
+  @include player(orange)
+}
+
+.purplePlayer {
+  @include player(purple)
+}

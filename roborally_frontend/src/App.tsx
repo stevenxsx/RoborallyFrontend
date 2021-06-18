@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import BoardComponent from "./components/BoardComponent";
+import GamesComponent from "./components/GamesComponent";
 import GameContextProvider from "./context/GameContextProvider";
+import { ToastProvider } from 'react-toast-notifications';
+
+
 
 function App() {
 
@@ -9,9 +13,11 @@ function App() {
             <header className="App-header">
             </header>
             {/*Context provider component below makes sure the context is accessible in any children components*/}
-            <GameContextProvider>
-                <BoardComponent/>
-            </GameContextProvider>
+                <GameContextProvider>
+                    <GamesComponent />
+                    <BoardComponent />
+                </GameContextProvider>
+
         </div>
     );
 }
